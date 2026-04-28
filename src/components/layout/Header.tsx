@@ -9,14 +9,14 @@ export default function Header() {
       <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/assets/img/logos/logo-w-bg-horizontal.png"
+            src="/assets/brand/amana-logo.png"
             alt="Amana Construction"
-            width={2000}
-            height={2000}
+            width={200}
+            height={200}
             className="h-10 w-auto"
             priority
           />
-          {/* <span className="text-lg font-semibold text-white">{SITE.name}</span> */}
+          <span className="text-lg font-semibold text-white">{SITE.name}</span>
         </Link>
 
         {/* Desktop nav */}

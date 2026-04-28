@@ -30,11 +30,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="mb-4 flex items-center gap-3">
               <Image
-                src="/assets/img/logos/logo-w-bg-horizontal.png"
+                src="/assets/brand/amana-logo-bg.png"
                 alt="Amana Construction"
                 width={2000}
                 height={2000}
-                className="h-10 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
             <p className="mb-4 text-sm leading-relaxed text-white/70">{SITE.description}</p>
