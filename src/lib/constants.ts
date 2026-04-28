@@ -5,7 +5,7 @@ export const SITE = {
     'With over 25 years of experience, Amana Construction is a trusted general contractor serving Roswell and the greater North Atlanta area.',
   phone: '(678) 468-8022',
   phoneHref: 'tel:+16784688022',
-  email: 'info@amanaconstruction.com',
+  email: 'support@amanaconstruction.us',
   address: 'Roswell, GA',
   serviceArea: 'Roswell · Alpharetta · Milton · Johns Creek · Marietta · Sandy Springs',
 } as const;

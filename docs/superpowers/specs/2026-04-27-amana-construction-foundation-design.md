@@ -154,7 +154,7 @@ export const SITE = {
   tagline: 'Built on Trust',
   description: 'Reliable general contracting for homeowners, investors, and businesses.',
   phone: '(000) 000-0000',
-  email: 'info@amanaconstruction.com',
+  email: 'support@amanaconstruction.us',
   serviceArea: 'Your City, State',
 };
 

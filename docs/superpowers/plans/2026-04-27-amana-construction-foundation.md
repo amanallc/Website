@@ -352,7 +352,7 @@ export const SITE = {
   description:
     'Reliable general contracting for homeowners, investors, and businesses. Clear communication, honest pricing, and quality work from start to finish.',
   phone: '(000) 000-0000',
-  email: 'info@amanaconstruction.com',
+  email: 'support@amanaconstruction.us',
   serviceArea: 'Your City, State',
 } as const;
 

@@ -12,7 +12,7 @@ Port the UpConstruction Bootstrap 5 HTML template to Next.js 15 + Tailwind CSS, 
 
 **Company:** Amana Construction  
 **Phone:** (678) 468-8022  
-**Email:** info@amanaconstruction.com  
+**Email:** support@amanaconstruction.us  
 **Location:** Roswell, GA (North Atlanta metro)  
 **Service Area:** Roswell, Alpharetta, Milton, Johns Creek, Marietta, Sandy Springs, Dunwoody, Cumming  
 **Tagline:** Built on Trust  
@@ -198,7 +198,7 @@ Each slide has a dark overlay with centered content:
 
 ```bash
 RESEND_API_KEY=re_...              # required for email
-CONTACT_EMAIL=info@amanaconstruction.com  # where form submissions go
+CONTACT_EMAIL=support@amanaconstruction.us  # where form submissions go
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 

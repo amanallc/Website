@@ -188,7 +188,7 @@ Add at bottom of `.gitignore`:
 
 ```bash
 RESEND_API_KEY=re_your_api_key_here
-CONTACT_EMAIL=info@amanaconstruction.com
+CONTACT_EMAIL=support@amanaconstruction.us
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
@@ -835,7 +835,7 @@ export async function POST(request: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: 'Amana Construction <onboarding@resend.dev>',
-    to: process.env.CONTACT_EMAIL ?? 'info@amanaconstruction.com',
+    to: process.env.CONTACT_EMAIL ?? 'support@amanaconstruction.us',
     replyTo: email,
     subject: `New Quote Request from ${name}`,
     react: ContactEmail({ name, email, phone, message }),

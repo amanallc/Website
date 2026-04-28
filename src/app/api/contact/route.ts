@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: 'Amana Construction <onboarding@resend.dev>',
-    to: process.env.CONTACT_EMAIL ?? 'info@amanaconstruction.com',
+    to: process.env.CONTACT_EMAIL ?? 'support@amanaconstruction.us',
     replyTo: email,
     subject: `New Quote Request from ${name}`,
     react: ContactEmail({ name, email, phone, zip, message }),
