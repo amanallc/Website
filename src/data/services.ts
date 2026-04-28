@@ -31,7 +31,7 @@ export const SERVICES: Service[] = [
     icon: 'Briefcase',
     title: 'Commercial Build-Outs',
     description:
-      "Office spaces, retail locations, restaurants, and tenant improvements. We work around your business schedule to minimize disruption and meet your deadline.",
+      'Office spaces, retail locations, restaurants, and tenant improvements. We work around your business schedule to minimize disruption and meet your deadline.',
     href: '/services#commercial',
   },
   {

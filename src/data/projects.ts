@@ -42,7 +42,8 @@ export const PROJECTS: Project[] = [
     title: 'Erosion Control & Site Prep',
     category: 'construction',
     image: '/assets/img/real/project-erosion.jpeg',
-    description: 'Erosion control measures and environmental compliance during active construction.',
+    description:
+      'Erosion control measures and environmental compliance during active construction.',
   },
   {
     id: '6',
