@@ -105,6 +105,7 @@ git commit -m "chore: initialize Next.js 15 project with all dependencies"
 - [ ] **Step 1: Update package.json**
 
 Edit `package.json`. Set top-level fields:
+
 ```json
 {
   "name": "amana-construction",
@@ -113,11 +114,21 @@ Edit `package.json`. Set top-level fields:
   "description": "Website for Amana Construction, a trusted general contractor serving Roswell, GA and the North Atlanta area.",
   "author": "Amana Construction",
   "license": "UNLICENSED",
-  "keywords": ["amana construction","construction","general contractor","roswell ga","atlanta","renovation","remodeling","new construction"]
+  "keywords": [
+    "amana construction",
+    "construction",
+    "general contractor",
+    "roswell ga",
+    "atlanta",
+    "renovation",
+    "remodeling",
+    "new construction"
+  ]
 }
 ```
 
 Replace `"scripts"`:
+
 ```json
 "scripts": {
   "dev": "next dev --turbopack",
@@ -157,6 +168,7 @@ dist
 - [ ] **Step 4: Append to .gitignore**
 
 Add at bottom of `.gitignore`:
+
 ```
 .env
 .env.local
@@ -230,7 +242,7 @@ git commit -m "chore: add all brand and project image assets"
 **Tailwind v4 path** — replace `src/app/globals.css` entirely:
 
 ```css
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-charcoal: #282933;
@@ -273,11 +285,20 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; }
-body { @apply bg-linen text-charcoal; }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-linen text-charcoal;
+}
 
-.swiper-button-next, .swiper-button-prev { color: theme('colors.gold') !important; }
-.swiper-pagination-bullet-active { background: theme('colors.gold') !important; }
+.swiper-button-next,
+.swiper-button-prev {
+  color: theme('colors.gold') !important;
+}
+.swiper-pagination-bullet-active {
+  background: theme('colors.gold') !important;
+}
 ```
 
 And create `tailwind.config.ts`:
@@ -376,7 +397,7 @@ export const SERVICES: Service[] = [
     icon: 'Building2',
     title: 'General Contracting',
     description:
-      'Full-service project oversight from pre-construction through final walkthrough. We coordinate scheduling, subcontractors, materials, and inspections so you don\'t have to.',
+      "Full-service project oversight from pre-construction through final walkthrough. We coordinate scheduling, subcontractors, materials, and inspections so you don't have to.",
     href: '/services#general-contracting',
   },
   {
@@ -404,14 +425,14 @@ export const SERVICES: Service[] = [
     icon: 'ArrowUpRight',
     title: 'Home Additions',
     description:
-      'Seamlessly expand your living space with additions that match your home\'s existing architecture and style. From sunrooms to second stories.',
+      "Seamlessly expand your living space with additions that match your home's existing architecture and style. From sunrooms to second stories.",
     href: '/services#additions',
   },
   {
     icon: 'Trees',
     title: 'Outdoor Living Spaces',
     description:
-      'Decks, patios, pergolas, and hardscaping that bring Georgia\'s beautiful outdoors into your home life. Designed to last through every season.',
+      "Decks, patios, pergolas, and hardscaping that bring Georgia's beautiful outdoors into your home life. Designed to last through every season.",
     href: '/services#outdoor',
   },
 ];
@@ -464,7 +485,8 @@ export const PROJECTS: Project[] = [
     title: 'Erosion Control & Site Prep',
     category: 'construction',
     image: '/assets/img/real/project-erosion.jpeg',
-    description: 'Erosion control measures and environmental compliance during active construction.',
+    description:
+      'Erosion control measures and environmental compliance during active construction.',
   },
   {
     id: '6',
@@ -539,13 +561,13 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Sarah K.',
     role: 'Property Investor — Alpharetta, GA',
     quote:
-      'We\'ve worked with Amana on three investment properties now. Their attention to detail and honest pricing keeps bringing us back. True professionals.',
+      "We've worked with Amana on three investment properties now. Their attention to detail and honest pricing keeps bringing us back. True professionals.",
   },
   {
     name: 'David R.',
     role: 'Business Owner — Sandy Springs, GA',
     quote:
-      'They built out our office space on a tight timeline and didn\'t cut a single corner. Clear communication throughout. The result exceeded our expectations.',
+      "They built out our office space on a tight timeline and didn't cut a single corner. Clear communication throughout. The result exceeded our expectations.",
   },
 ];
 ```
@@ -588,7 +610,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: '3',
     title: 'Kitchen Remodel Trends for North Atlanta Homes in 2026',
     excerpt:
-      'From quartz countertops to open layouts, here\'s what Roswell and Alpharetta homeowners are choosing for their kitchen renovations this year.',
+      "From quartz countertops to open layouts, here's what Roswell and Alpharetta homeowners are choosing for their kitchen renovations this year.",
     date: 'February 10, 2026',
     author: 'Amana Construction',
     image: '/assets/img/blog/blog-3.jpg',
@@ -682,19 +704,47 @@ export function ContactEmail({ name, email, phone, message }: ContactEmailProps)
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <tbody>
                 <tr>
-                  <td style={{ padding: '8px 0', color: '#666', width: '100px', fontWeight: 'bold', fontSize: '14px' }}>
+                  <td
+                    style={{
+                      padding: '8px 0',
+                      color: '#666',
+                      width: '100px',
+                      fontWeight: 'bold',
+                      fontSize: '14px',
+                    }}
+                  >
                     Name
                   </td>
                   <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>{name}</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '8px 0', color: '#666', fontWeight: 'bold', fontSize: '14px' }}>Email</td>
+                  <td
+                    style={{
+                      padding: '8px 0',
+                      color: '#666',
+                      fontWeight: 'bold',
+                      fontSize: '14px',
+                    }}
+                  >
+                    Email
+                  </td>
                   <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>{email}</td>
                 </tr>
                 {phone && (
                   <tr>
-                    <td style={{ padding: '8px 0', color: '#666', fontWeight: 'bold', fontSize: '14px' }}>Phone</td>
-                    <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>{phone}</td>
+                    <td
+                      style={{
+                        padding: '8px 0',
+                        color: '#666',
+                        fontWeight: 'bold',
+                        fontSize: '14px',
+                      }}
+                    >
+                      Phone
+                    </td>
+                    <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>
+                      {phone}
+                    </td>
                   </tr>
                 )}
               </tbody>
@@ -702,7 +752,9 @@ export function ContactEmail({ name, email, phone, message }: ContactEmailProps)
 
             <Hr style={{ borderColor: '#e5e5e5', margin: '24px 0' }} />
 
-            <Text style={{ color: '#666', fontWeight: 'bold', fontSize: '14px', marginBottom: '8px' }}>
+            <Text
+              style={{ color: '#666', fontWeight: 'bold', fontSize: '14px', marginBottom: '8px' }}
+            >
               Message
             </Text>
             <Text
@@ -729,7 +781,8 @@ export function ContactEmail({ name, email, phone, message }: ContactEmailProps)
             }}
           >
             <Text style={{ color: '#ffffff', fontSize: '12px', margin: 0, opacity: 0.6 }}>
-              Amana Construction &middot; Built on Trust &middot; Roswell, GA &middot; (678) 468-8022
+              Amana Construction &middot; Built on Trust &middot; Roswell, GA &middot; (678)
+              468-8022
             </Text>
           </Section>
         </Container>
@@ -790,7 +843,10 @@ export async function POST(request: NextRequest) {
 
   if (error) {
     console.error('Resend error:', error);
-    return NextResponse.json({ error: 'Failed to send message. Please try again.' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to send message. Please try again.' },
+      { status: 500 },
+    );
   }
 
   return NextResponse.json({ success: true });
@@ -834,14 +890,14 @@ export default function MobileNav() {
       </button>
 
       {open && (
-        <div className="absolute left-0 right-0 top-full bg-charcoal shadow-lg">
+        <div className="bg-charcoal absolute top-full right-0 left-0 shadow-lg">
           <ul className="flex flex-col px-6 py-4">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 text-sm font-medium text-white/80 hover:text-gold border-b border-white/10 last:border-0"
+                  className="hover:text-gold block border-b border-white/10 py-3 text-sm font-medium text-white/80 last:border-0"
                 >
                   {link.label}
                 </Link>
@@ -865,7 +921,7 @@ import MobileNav from './MobileNav';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-charcoal shadow-md">
+    <header className="bg-charcoal sticky top-0 z-50 shadow-md">
       <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -885,7 +941,7 @@ export default function Header() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-white/80 transition-colors hover:text-gold"
+                className="hover:text-gold text-sm font-medium text-white/80 transition-colors"
               >
                 {link.label}
               </Link>
@@ -894,7 +950,7 @@ export default function Header() {
           <li>
             <Link
               href="/contact"
-              className="rounded bg-gold px-4 py-2 text-sm font-semibold text-charcoal transition-opacity hover:opacity-90"
+              className="bg-gold text-charcoal rounded px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-90"
             >
               Free Estimate
             </Link>
@@ -950,9 +1006,7 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="mb-4 text-sm leading-relaxed text-white/70">
-              {SITE.description}
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-white/70">{SITE.description}</p>
             <div className="space-y-2 text-sm text-white/70">
               <p className="flex items-center gap-2">
                 <MapPin size={14} className="text-gold shrink-0" />
@@ -972,13 +1026,25 @@ export default function Footer() {
               </p>
             </div>
             <div className="mt-4 flex gap-3">
-              <a href="#" aria-label="Facebook" className="text-white/60 hover:text-gold transition-colors">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="hover:text-gold text-white/60 transition-colors"
+              >
                 <Facebook size={18} />
               </a>
-              <a href="#" aria-label="Instagram" className="text-white/60 hover:text-gold transition-colors">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="hover:text-gold text-white/60 transition-colors"
+              >
                 <Instagram size={18} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-white/60 hover:text-gold transition-colors">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="hover:text-gold text-white/60 transition-colors"
+              >
                 <Linkedin size={18} />
               </a>
             </div>
@@ -1027,7 +1093,9 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-4 text-center text-xs text-white/50 md:flex-row">
-          <p>&copy; {new Date().getFullYear()} {SITE.name}. All Rights Reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {SITE.name}. All Rights Reserved.
+          </p>
           <p>{SITE.tagline} &middot; Roswell, GA</p>
         </div>
       </div>
@@ -1069,9 +1137,7 @@ export const metadata: Metadata = {
     'Amana Construction is a trusted general contractor serving Roswell, Alpharetta, Milton, and the greater North Atlanta area. 25+ years of experience in residential and commercial construction.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={geistSans.variable}>
       <body className="font-sans antialiased">
@@ -1097,7 +1163,7 @@ interface PageHeroProps {
 
 export default function PageHero({ title, breadcrumb }: PageHeroProps) {
   return (
-    <section className="relative flex h-48 items-center bg-charcoal md:h-64">
+    <section className="bg-charcoal relative flex h-48 items-center md:h-64">
       <Image
         src="/assets/img/page-title-bg.jpg"
         alt=""
@@ -1108,7 +1174,9 @@ export default function PageHero({ title, breadcrumb }: PageHeroProps) {
       <div className="relative mx-auto w-full max-w-6xl px-6">
         <h1 className="text-3xl font-bold text-white md:text-4xl">{title}</h1>
         <nav className="mt-2 text-sm text-white/60" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+          <Link href="/" className="hover:text-gold transition-colors">
+            Home
+          </Link>
           <span className="mx-2">/</span>
           <span className="text-gold">{breadcrumb}</span>
         </nav>
@@ -1122,10 +1190,7 @@ export default function PageHero({ title, breadcrumb }: PageHeroProps) {
 
 ```tsx
 import Link from 'next/link';
-import {
-  Building2, Hammer, Home, Briefcase, ArrowUpRight, Trees,
-  LucideIcon,
-} from 'lucide-react';
+import { Building2, Hammer, Home, Briefcase, ArrowUpRight, Trees, LucideIcon } from 'lucide-react';
 import type { Service } from '@/data/services';
 
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -1141,14 +1206,14 @@ export default function ServiceCard({ service }: { service: Service }) {
   const Icon = ICON_MAP[service.icon] ?? Building2;
   return (
     <div className="group rounded-lg border border-white/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-md bg-gold/10 text-gold">
+      <div className="bg-gold/10 text-gold mb-4 inline-flex h-12 w-12 items-center justify-center rounded-md">
         <Icon size={24} />
       </div>
-      <h3 className="mb-2 text-lg font-semibold text-charcoal">{service.title}</h3>
-      <p className="mb-4 text-sm leading-relaxed text-charcoal/70">{service.description}</p>
+      <h3 className="text-charcoal mb-2 text-lg font-semibold">{service.title}</h3>
+      <p className="text-charcoal/70 mb-4 text-sm leading-relaxed">{service.description}</p>
       <Link
         href={service.href}
-        className="text-sm font-medium text-gold transition-colors hover:text-charcoal"
+        className="text-gold hover:text-charcoal text-sm font-medium transition-colors"
       >
         Learn more →
       </Link>
@@ -1198,7 +1263,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
         <Image src={post.image} alt={post.title} fill className="object-cover" />
       </div>
       <div className="p-5">
-        <div className="mb-3 flex gap-4 text-xs text-charcoal/50">
+        <div className="text-charcoal/50 mb-3 flex gap-4 text-xs">
           <span className="flex items-center gap-1">
             <Calendar size={12} /> {post.date}
           </span>
@@ -1206,9 +1271,12 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             <User size={12} /> {post.author}
           </span>
         </div>
-        <h3 className="mb-2 font-semibold leading-snug text-charcoal">{post.title}</h3>
-        <p className="mb-4 text-sm leading-relaxed text-charcoal/70">{post.excerpt}</p>
-        <Link href={post.href} className="text-sm font-medium text-gold hover:text-charcoal transition-colors">
+        <h3 className="text-charcoal mb-2 leading-snug font-semibold">{post.title}</h3>
+        <p className="text-charcoal/70 mb-4 text-sm leading-relaxed">{post.excerpt}</p>
+        <Link
+          href={post.href}
+          className="text-gold hover:text-charcoal text-sm font-medium transition-colors"
+        >
           Read more →
         </Link>
       </div>
@@ -1277,9 +1345,7 @@ export default function HeroCarousel() {
                 <h1 className="mb-3 text-4xl font-bold text-white drop-shadow md:text-6xl">
                   Amana Construction
                 </h1>
-                <p className="mb-8 text-xl font-medium text-gold md:text-2xl">
-                  Built on Trust
-                </p>
+                <p className="text-gold mb-8 text-xl font-medium md:text-2xl">Built on Trust</p>
                 <p className="mb-8 max-w-xl text-base text-white/80 md:text-lg">
                   Serving Roswell, Alpharetta, and the greater North Atlanta area with quality
                   craftsmanship and honest communication.
@@ -1287,13 +1353,13 @@ export default function HeroCarousel() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="rounded bg-gold px-8 py-3 font-semibold text-charcoal transition-opacity hover:opacity-90"
+                    className="bg-gold text-charcoal rounded px-8 py-3 font-semibold transition-opacity hover:opacity-90"
                   >
                     Get a Free Estimate
                   </Link>
                   <Link
                     href="/projects"
-                    className="rounded border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-charcoal"
+                    className="hover:text-charcoal rounded border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white"
                   >
                     View Our Work
                   </Link>
@@ -1335,7 +1401,12 @@ interface FormState {
 }
 
 export default function ContactForm() {
-  const [form, setForm] = useState<ContactFormData>({ name: '', email: '', phone: '', message: '' });
+  const [form, setForm] = useState<ContactFormData>({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
   const [state, setState] = useState<FormState>({ status: 'idle', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -1359,7 +1430,10 @@ export default function ContactForm() {
         throw new Error(data.error ?? 'Something went wrong');
       }
 
-      setState({ status: 'success', message: "Thank you! We'll be in touch within 1 business day." });
+      setState({
+        status: 'success',
+        message: "Thank you! We'll be in touch within 1 business day.",
+      });
       setForm({ name: '', email: '', phone: '', message: '' });
     } catch (err) {
       setState({
@@ -1424,7 +1498,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.status === 'loading'}
-        className="w-full rounded bg-gold py-3 font-semibold text-charcoal transition-opacity hover:opacity-90 disabled:opacity-50"
+        className="bg-gold text-charcoal w-full rounded py-3 font-semibold transition-opacity hover:opacity-90 disabled:opacity-50"
       >
         {state.status === 'loading' ? 'Sending…' : 'Send Message'}
       </button>
@@ -1468,20 +1542,20 @@ export default function GetStarted() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left: info */}
           <div>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+            <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
               Get Started
             </p>
-            <h2 className="mb-4 text-3xl font-bold text-charcoal md:text-4xl">
+            <h2 className="text-charcoal mb-4 text-3xl font-bold md:text-4xl">
               Request a Free Estimate
             </h2>
-            <p className="mb-6 leading-relaxed text-charcoal/70">
+            <p className="text-charcoal/70 mb-6 leading-relaxed">
               {SITE.description} We&rsquo;re ready to help with your next residential or commercial
               project. Fill out the form and we&rsquo;ll follow up within one business day.
             </p>
             <ul className="mb-8 space-y-3">
               {BULLETS.map((b) => (
-                <li key={b} className="flex items-start gap-3 text-sm text-charcoal/80">
-                  <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-gold" />
+                <li key={b} className="text-charcoal/80 flex items-start gap-3 text-sm">
+                  <CheckCircle2 size={18} className="text-gold mt-0.5 shrink-0" />
                   {b}
                 </li>
               ))}
@@ -1498,7 +1572,7 @@ export default function GetStarted() {
 
           {/* Right: form */}
           <div className="rounded-lg bg-white p-8 shadow-md">
-            <h3 className="mb-6 text-xl font-semibold text-charcoal">Send Us a Message</h3>
+            <h3 className="text-charcoal mb-6 text-xl font-semibold">Send Us a Message</h3>
             <ContactForm />
           </div>
         </div>
@@ -1521,22 +1595,23 @@ export default function RecentProjects() {
     <section className="py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">Our Work</p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">Recent Projects</h2>
-          <p className="mx-auto mt-3 max-w-xl text-charcoal/70">
-            From foundations to finishes, here&rsquo;s a look at recent work across the North Atlanta area.
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">Our Work</p>
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">Recent Projects</h2>
+          <p className="text-charcoal/70 mx-auto mt-3 max-w-xl">
+            From foundations to finishes, here&rsquo;s a look at recent work across the North
+            Atlanta area.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((project) => (
-            <div key={project.id} className="relative h-56 overflow-hidden rounded-lg group">
+            <div key={project.id} className="group relative h-56 overflow-hidden rounded-lg">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 to-transparent p-4">
                 <p className="text-sm font-medium text-white">{project.title}</p>
               </div>
             </div>
@@ -1545,7 +1620,7 @@ export default function RecentProjects() {
         <div className="mt-10 text-center">
           <Link
             href="/projects"
-            className="inline-block rounded border-2 border-charcoal px-8 py-3 font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-white"
+            className="border-charcoal text-charcoal hover:bg-charcoal inline-block rounded border-2 px-8 py-3 font-semibold transition-colors hover:text-white"
           >
             View All Projects
           </Link>
@@ -1568,12 +1643,13 @@ export default function ServicesSection() {
     <section className="bg-linen py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
             What We Do
           </p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">Our Services</h2>
-          <p className="mx-auto mt-3 max-w-xl text-charcoal/70">
-            From new construction to remodeling, we deliver quality craftsmanship across every project type.
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">Our Services</h2>
+          <p className="text-charcoal/70 mx-auto mt-3 max-w-xl">
+            From new construction to remodeling, we deliver quality craftsmanship across every
+            project type.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -1584,7 +1660,7 @@ export default function ServicesSection() {
         <div className="mt-10 text-center">
           <Link
             href="/services"
-            className="inline-block rounded bg-gold px-8 py-3 font-semibold text-charcoal transition-opacity hover:opacity-90"
+            className="bg-gold text-charcoal inline-block rounded px-8 py-3 font-semibold transition-opacity hover:opacity-90"
           >
             View All Services
           </Link>
@@ -1624,20 +1700,21 @@ export default function AltServices() {
             />
           </div>
           <div>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+            <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
               Why Choose Us
             </p>
-            <h2 className="mb-4 text-3xl font-bold text-charcoal md:text-4xl">
+            <h2 className="text-charcoal mb-4 text-3xl font-bold md:text-4xl">
               Quality You Can Count On
             </h2>
-            <p className="mb-6 leading-relaxed text-charcoal/70">
-              At Amana Construction, we don&rsquo;t just build structures — we build trust. Every project
-              is handled with the same care and professionalism we&rsquo;d bring to our own home.
+            <p className="text-charcoal/70 mb-6 leading-relaxed">
+              At Amana Construction, we don&rsquo;t just build structures — we build trust. Every
+              project is handled with the same care and professionalism we&rsquo;d bring to our own
+              home.
             </p>
             <ul className="grid gap-3 sm:grid-cols-2">
               {FEATURES.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-sm text-charcoal/80">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-gold" />
+                <li key={f} className="text-charcoal/80 flex items-start gap-2 text-sm">
+                  <CheckCircle2 size={16} className="text-gold mt-0.5 shrink-0" />
                   {f}
                 </li>
               ))}
@@ -1661,11 +1738,11 @@ export default function RecentBlog() {
     <section className="bg-linen py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
             Resources
           </p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">From Our Blog</h2>
-          <p className="mx-auto mt-3 max-w-xl text-charcoal/70">
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">From Our Blog</h2>
+          <p className="text-charcoal/70 mx-auto mt-3 max-w-xl">
             Tips, guides, and insights for homeowners and business owners in the North Atlanta area.
           </p>
         </div>
@@ -1707,28 +1784,48 @@ const TABS = [
     label: 'Planning',
     heading: 'Thorough Pre-Construction Planning',
     body: 'We invest time upfront to understand your goals, review site conditions, and plan every detail before breaking ground. This eliminates costly surprises and keeps your project on schedule.',
-    bullets: ['Site assessment & feasibility review', 'Detailed scope of work', 'Permit coordination', 'Budget development'],
+    bullets: [
+      'Site assessment & feasibility review',
+      'Detailed scope of work',
+      'Permit coordination',
+      'Budget development',
+    ],
     image: '/assets/img/features-1.jpg',
   },
   {
     label: 'Execution',
     heading: 'Skilled Execution on Every Phase',
     body: 'Our crews bring decades of hands-on experience to every phase of construction. We self-perform key scopes and closely manage all subcontractors to maintain quality and timeline.',
-    bullets: ['Daily site supervision', 'Quality control checkpoints', 'Subcontractor management', 'Progress reporting'],
+    bullets: [
+      'Daily site supervision',
+      'Quality control checkpoints',
+      'Subcontractor management',
+      'Progress reporting',
+    ],
     image: '/assets/img/features-2.jpg',
   },
   {
     label: 'Materials',
     heading: 'Durable, Quality Materials',
     body: 'We use materials that are built to last — no shortcuts, no cheap substitutes. Our supplier relationships give us access to quality products at competitive pricing.',
-    bullets: ['Code-compliant materials', 'Vetted supplier network', 'Energy-efficient options available', 'Warranty-backed products'],
+    bullets: [
+      'Code-compliant materials',
+      'Vetted supplier network',
+      'Energy-efficient options available',
+      'Warranty-backed products',
+    ],
     image: '/assets/img/features-3.jpg',
   },
   {
     label: 'Delivery',
     heading: 'On-Time, On-Budget Delivery',
     body: 'We take our commitments seriously. Our project management system tracks milestones, flags issues early, and keeps your project moving toward a clean, on-time finish.',
-    bullets: ['Milestone scheduling', 'Budget tracking & reporting', 'Clean final walkthrough', '1-year craftsmanship warranty'],
+    bullets: [
+      'Milestone scheduling',
+      'Budget tracking & reporting',
+      'Clean final walkthrough',
+      '1-year craftsmanship warranty',
+    ],
     image: '/assets/img/features-4.jpg',
   },
 ];
@@ -1741,13 +1838,15 @@ export default function Features() {
     <section className="bg-linen py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">Our Process</p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">How We Work</h2>
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
+            Our Process
+          </p>
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">How We Work</h2>
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Tabs + content */}
           <div>
-            <div className="mb-6 flex gap-2 flex-wrap">
+            <div className="mb-6 flex flex-wrap gap-2">
               {TABS.map((t, i) => (
                 <button
                   key={t.label}
@@ -1755,19 +1854,19 @@ export default function Features() {
                   className={`rounded px-4 py-2 text-sm font-semibold transition-colors ${
                     active === i
                       ? 'bg-gold text-charcoal'
-                      : 'bg-white text-charcoal/60 hover:text-charcoal'
+                      : 'text-charcoal/60 hover:text-charcoal bg-white'
                   }`}
                 >
                   {t.label}
                 </button>
               ))}
             </div>
-            <h3 className="mb-3 text-xl font-bold text-charcoal">{tab.heading}</h3>
-            <p className="mb-5 leading-relaxed text-charcoal/70">{tab.body}</p>
+            <h3 className="text-charcoal mb-3 text-xl font-bold">{tab.heading}</h3>
+            <p className="text-charcoal/70 mb-5 leading-relaxed">{tab.body}</p>
             <ul className="space-y-2">
               {tab.bullets.map((b) => (
-                <li key={b} className="flex items-center gap-2 text-sm text-charcoal/80">
-                  <CheckCircle2 size={16} className="shrink-0 text-gold" />
+                <li key={b} className="text-charcoal/80 flex items-center gap-2 text-sm">
+                  <CheckCircle2 size={16} className="text-gold shrink-0" />
                   {b}
                 </li>
               ))}
@@ -1808,8 +1907,10 @@ export default function Portfolio() {
     <section className="py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-10 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">Portfolio</p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">Our Projects</h2>
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
+            Portfolio
+          </p>
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">Our Projects</h2>
         </div>
 
         {/* Filter buttons */}
@@ -1821,7 +1922,7 @@ export default function Portfolio() {
               className={`rounded px-5 py-2 text-sm font-semibold transition-colors ${
                 active === f.value
                   ? 'bg-gold text-charcoal'
-                  : 'bg-white text-charcoal/60 hover:text-charcoal border border-charcoal/10'
+                  : 'text-charcoal/60 hover:text-charcoal border-charcoal/10 border bg-white'
               }`}
             >
               {f.label}
@@ -1857,7 +1958,7 @@ export default function TestimonialsSection() {
     <section className="bg-charcoal py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
             Testimonials
           </p>
           <h2 className="text-3xl font-bold text-white md:text-4xl">What Our Clients Say</h2>
@@ -1882,7 +1983,9 @@ export default function TestimonialsSection() {
                     <Star key={j} size={14} className="fill-gold text-gold" />
                   ))}
                 </div>
-                <p className="mb-4 text-sm leading-relaxed text-white/80 italic">&ldquo;{t.quote}&rdquo;</p>
+                <p className="mb-4 text-sm leading-relaxed text-white/80 italic">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
                 <div>
                   <p className="font-semibold text-white">{t.name}</p>
                   <p className="text-xs text-white/50">{t.role}</p>
@@ -1946,7 +2049,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [value]);
 
   return (
-    <div ref={ref} className="text-4xl font-bold text-gold md:text-5xl">
+    <div ref={ref} className="text-gold text-4xl font-bold md:text-5xl">
       {count}
       {suffix}
     </div>
@@ -2080,27 +2183,27 @@ export default function AboutPage() {
               />
             </div>
             <div>
-              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+              <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
                 Our Story
               </p>
-              <h2 className="mb-4 text-3xl font-bold text-charcoal md:text-4xl">
+              <h2 className="text-charcoal mb-4 text-3xl font-bold md:text-4xl">
                 25+ Years of Building Trust
               </h2>
-              <p className="mb-4 leading-relaxed text-charcoal/70">
+              <p className="text-charcoal/70 mb-4 leading-relaxed">
                 With over 25 years of experience in the construction industry, Amana Construction
                 has become a trusted name serving Roswell and the greater North Atlanta area. Our
                 team brings the knowledge, skills, and expertise to handle any project — residential
                 or commercial, big or small.
               </p>
-              <p className="mb-6 leading-relaxed text-charcoal/70">
+              <p className="text-charcoal/70 mb-6 leading-relaxed">
                 We have completed numerous projects ranging from custom homes and major renovations
                 to commercial build-outs across Alpharetta, Milton, Johns Creek, Marietta, and
                 surrounding communities. Our clients come back — and they send their neighbors.
               </p>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {VALUES.map((v) => (
-                  <li key={v} className="flex items-start gap-2 text-sm text-charcoal/80">
-                    <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-gold" />
+                  <li key={v} className="text-charcoal/80 flex items-start gap-2 text-sm">
+                    <CheckCircle2 size={16} className="text-gold mt-0.5 shrink-0" />
                     {v}
                   </li>
                 ))}
@@ -2154,13 +2257,13 @@ export default function ServicesPage() {
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+            <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
               What We Offer
             </p>
-            <h2 className="text-3xl font-bold text-charcoal md:text-4xl">
+            <h2 className="text-charcoal text-3xl font-bold md:text-4xl">
               Full-Service Construction
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-charcoal/70">
+            <p className="text-charcoal/70 mx-auto mt-3 max-w-xl">
               Whether you&rsquo;re renovating a single room or building from the ground up, Amana
               Construction has the experience and crew to get it done right.
             </p>
@@ -2261,16 +2364,16 @@ export default function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Left: info */}
             <div>
-              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+              <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
                 Get in Touch
               </p>
-              <h2 className="mb-4 text-3xl font-bold text-charcoal md:text-4xl">
+              <h2 className="text-charcoal mb-4 text-3xl font-bold md:text-4xl">
                 Request a Free Estimate
               </h2>
-              <p className="mb-8 leading-relaxed text-charcoal/70">
+              <p className="text-charcoal/70 mb-8 leading-relaxed">
                 Ready to start your project? Fill out the form and we&rsquo;ll respond within one
                 business day. Prefer to call? Reach us at{' '}
-                <a href={SITE.phoneHref} className="font-semibold text-gold hover:underline">
+                <a href={SITE.phoneHref} className="text-gold font-semibold hover:underline">
                   {SITE.phone}
                 </a>
                 .
@@ -2279,19 +2382,22 @@ export default function ContactPage() {
               <ul className="space-y-5">
                 {INFO.map(({ icon: Icon, label, value, href }) => (
                   <li key={label} className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gold/10 text-gold">
+                    <div className="bg-gold/10 text-gold flex h-10 w-10 shrink-0 items-center justify-center rounded-md">
                       <Icon size={18} />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-charcoal/50">
+                      <p className="text-charcoal/50 text-xs font-semibold tracking-wider uppercase">
                         {label}
                       </p>
                       {href ? (
-                        <a href={href} className="font-medium text-charcoal hover:text-gold transition-colors">
+                        <a
+                          href={href}
+                          className="text-charcoal hover:text-gold font-medium transition-colors"
+                        >
                           {value}
                         </a>
                       ) : (
-                        <p className="font-medium text-charcoal">{value}</p>
+                        <p className="text-charcoal font-medium">{value}</p>
                       )}
                     </div>
                   </li>
@@ -2299,7 +2405,7 @@ export default function ContactPage() {
               </ul>
 
               <div className="mt-8">
-                <p className="mb-2 text-sm font-semibold text-charcoal/50 uppercase tracking-wider">
+                <p className="text-charcoal/50 mb-2 text-sm font-semibold tracking-wider uppercase">
                   Service Area
                 </p>
                 <p className="text-charcoal/70 text-sm leading-relaxed">{SITE.serviceArea}</p>
@@ -2308,7 +2414,7 @@ export default function ContactPage() {
 
             {/* Right: form */}
             <div className="rounded-lg bg-white p-8 shadow-md">
-              <h3 className="mb-6 text-xl font-semibold text-charcoal">Send Us a Message</h3>
+              <h3 className="text-charcoal mb-6 text-xl font-semibold">Send Us a Message</h3>
               <ContactForm />
             </div>
           </div>
@@ -2359,26 +2465,31 @@ Alpharetta, Milton, Johns Creek, Marietta, and the greater North Atlanta area.
 ## Local Development
 
 ### 1. Install dependencies
+
 npm install
 
 ### 2. Create .env.local
+
 Copy `.env.example` to `.env.local` and fill in your values:
+
 - `RESEND_API_KEY` — get a free key at resend.com
 - `CONTACT_EMAIL` — where form submissions are delivered
 
 ### 3. Start dev server
+
 npm run dev
+
 # Open http://localhost:3000
 
 ---
 
 ## Code Quality
 
-npm run typecheck       # TypeScript check
-npm run lint            # ESLint
-npm run lint:fix        # ESLint auto-fix
-npm run format:check    # Prettier check
-npm run format          # Prettier auto-format
+npm run typecheck # TypeScript check
+npm run lint # ESLint
+npm run lint:fix # ESLint auto-fix
+npm run format:check # Prettier check
+npm run format # Prettier auto-format
 
 ---
 
@@ -2429,6 +2540,7 @@ npm run typecheck 2>&1
 Expected: `Found 0 errors.`
 
 Common fixes:
+
 - If `Geist` not found in `next/font/google`: `npm install geist` and change import to `import { GeistSans } from 'geist/font/sans'`, use `GeistSans.variable` directly in `<html>` className, remove the `geistSans` const.
 - If Swiper CSS import errors: add `declare module 'swiper/css'` to `src/types/swiper.d.ts`
 - If `@react-email/components` types missing: `npm install -D @types/react-email` or check that `@react-email/components` is in `dependencies`

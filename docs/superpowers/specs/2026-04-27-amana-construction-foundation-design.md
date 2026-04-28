@@ -19,15 +19,15 @@ Build the clean foundation for the Amana Construction public website. This phase
 
 ## 2. Tech Stack
 
-| Concern | Choice | Reason |
-|---|---|---|
-| Framework | Next.js 15 (App Router) | Latest stable, best DX for React + SSR/SSG |
-| Language | TypeScript | Type safety, required by team standards |
-| Styling | Tailwind CSS | Utility-first, fast iteration, great for custom design tokens |
-| Linting | ESLint (Next.js config) | Standard for Next.js projects |
-| Formatting | Prettier + prettier-plugin-tailwindcss | Consistent style, class ordering |
-| Package manager | npm | Specified by user |
-| Node version | 22 LTS | Current LTS as of 2026 |
+| Concern         | Choice                                 | Reason                                                        |
+| --------------- | -------------------------------------- | ------------------------------------------------------------- |
+| Framework       | Next.js 15 (App Router)                | Latest stable, best DX for React + SSR/SSG                    |
+| Language        | TypeScript                             | Type safety, required by team standards                       |
+| Styling         | Tailwind CSS                           | Utility-first, fast iteration, great for custom design tokens |
+| Linting         | ESLint (Next.js config)                | Standard for Next.js projects                                 |
+| Formatting      | Prettier + prettier-plugin-tailwindcss | Consistent style, class ordering                              |
+| Package manager | npm                                    | Specified by user                                             |
+| Node version    | 22 LTS                                 | Current LTS as of 2026                                        |
 
 No database, no auth, no backend in this phase.
 
@@ -78,10 +78,10 @@ No database, no auth, no backend in this phase.
 
 Two source files exist in the project root:
 
-| Source file | Destination | Purpose |
-|---|---|---|
-| `logo-no-bg.png` | `public/assets/brand/amana-logo.png` | Primary — used in Header, Hero |
-| `logo-w-bg.png` | `public/assets/brand/amana-logo-bg.png` | Alternate — available for dark/printed use |
+| Source file      | Destination                             | Purpose                                    |
+| ---------------- | --------------------------------------- | ------------------------------------------ |
+| `logo-no-bg.png` | `public/assets/brand/amana-logo.png`    | Primary — used in Header, Hero             |
+| `logo-w-bg.png`  | `public/assets/brand/amana-logo-bg.png` | Alternate — available for dark/printed use |
 
 All references use the path `/assets/brand/amana-logo.png`.
 
@@ -93,11 +93,11 @@ All references use the path `/assets/brand/amana-logo.png`.
 
 ```ts
 // tailwind.config.ts — custom color tokens
-charcoal: '#282933'   // primary text, header/footer bg
-black:    '#050505'   // deep black for strong contrast
-gold:     '#C99717'   // brand accent — tagline, buttons, highlights
-white:    '#FFFFFF'   // text on dark backgrounds
-linen:    '#F7F7F4'   // page background (warm off-white)
+charcoal: '#282933'; // primary text, header/footer bg
+black: '#050505'; // deep black for strong contrast
+gold: '#C99717'; // brand accent — tagline, buttons, highlights
+white: '#FFFFFF'; // text on dark backgrounds
+linen: '#F7F7F4'; // page background (warm off-white)
 ```
 
 ### Typography
@@ -116,6 +116,7 @@ Generous whitespace throughout. Hero section is vertically centered with large t
 ## 6. Component Designs
 
 ### Header
+
 - Background: charcoal (`#282933`)
 - Left: logo image (~40px tall) + "Amana Construction" text in white
 - Right: nav links — Home, Services, About, Contact
@@ -124,6 +125,7 @@ Generous whitespace throughout. Hero section is vertically centered with large t
 - Sticky at top
 
 ### Hero Section
+
 - Background: linen (`#F7F7F4`)
 - Centered layout, large vertical padding
 - Logo mark: ~120px wide
@@ -136,6 +138,7 @@ Generous whitespace throughout. Hero section is vertically centered with large t
 - No stock images. No fake testimonials. No fake data.
 
 ### Footer
+
 - Background: charcoal
 - Text: white
 - Content: "Amana Construction · Built on Trust · © {year}"
@@ -153,14 +156,14 @@ export const SITE = {
   phone: '(000) 000-0000',
   email: 'info@amanaconstruction.com',
   serviceArea: 'Your City, State',
-}
+};
 
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
-]
+];
 ```
 
 ---
@@ -186,25 +189,30 @@ export const NAV_LINKS = [
   "author": "Amana Construction",
   "license": "UNLICENSED",
   "keywords": [
-    "amana construction", "construction", "general contractor",
-    "contractor", "remodeling", "renovation",
-    "residential construction", "commercial construction"
+    "amana construction",
+    "construction",
+    "general contractor",
+    "contractor",
+    "remodeling",
+    "renovation",
+    "residential construction",
+    "commercial construction"
   ]
 }
 ```
 
 ### Scripts
 
-| Script | Command |
-|---|---|
-| `dev` | `next dev` |
-| `build` | `next build` |
-| `start` | `next start` |
-| `lint` | `next lint` |
-| `lint:fix` | `next lint --fix` |
-| `format` | `prettier --write .` |
+| Script         | Command              |
+| -------------- | -------------------- |
+| `dev`          | `next dev`           |
+| `build`        | `next build`         |
+| `start`        | `next start`         |
+| `lint`         | `next lint`          |
+| `lint:fix`     | `next lint --fix`    |
+| `format`       | `prettier --write .` |
 | `format:check` | `prettier --check .` |
-| `typecheck` | `tsc --noEmit` |
+| `typecheck`    | `tsc --noEmit`       |
 
 ---
 

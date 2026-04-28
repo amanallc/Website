@@ -12,31 +12,32 @@
 
 ## File Map
 
-| File | Action | Responsibility |
-|---|---|---|
-| `public/assets/brand/amana-logo.png` | Create (copy from root) | Primary logo — transparent bg, used in Header + Hero |
-| `public/assets/brand/amana-logo-bg.png` | Create (copy from root) | Alternate logo — solid bg, available for future use |
-| `src/lib/constants.ts` | Create | Brand constants and nav link definitions |
-| `src/app/globals.css` | Replace | Tailwind v4 directives + custom color tokens + base styles |
-| `src/app/layout.tsx` | Replace | Root layout: Geist font, metadata, Header + Footer shell |
-| `src/app/page.tsx` | Replace | Homepage: renders Hero only |
-| `src/components/layout/Header.tsx` | Create | Sticky header with logo, company name, desktop nav |
-| `src/components/layout/Footer.tsx` | Create | Minimal footer with name, tagline, copyright year |
-| `src/components/sections/Hero.tsx` | Create | Full hero: logo mark, heading, tagline, copy, two CTAs |
-| `src/styles/.gitkeep` | Create | Reserve the styles directory |
-| `.prettierrc` | Create | Prettier config (semi, singleQuote, trailingComma, etc.) |
-| `.prettierignore` | Create | Files Prettier should skip |
-| `.nvmrc` | Create | Node 22 LTS pin |
-| `.env.example` | Create | Environment variable template |
-| `README.md` | Replace | Project docs with dev/lint/build/deploy instructions |
-| `package.json` | Modify | Name, description, keywords, author, license, scripts |
-| `next.config.ts` | Verify | Default generated config is sufficient |
+| File                                    | Action                  | Responsibility                                             |
+| --------------------------------------- | ----------------------- | ---------------------------------------------------------- |
+| `public/assets/brand/amana-logo.png`    | Create (copy from root) | Primary logo — transparent bg, used in Header + Hero       |
+| `public/assets/brand/amana-logo-bg.png` | Create (copy from root) | Alternate logo — solid bg, available for future use        |
+| `src/lib/constants.ts`                  | Create                  | Brand constants and nav link definitions                   |
+| `src/app/globals.css`                   | Replace                 | Tailwind v4 directives + custom color tokens + base styles |
+| `src/app/layout.tsx`                    | Replace                 | Root layout: Geist font, metadata, Header + Footer shell   |
+| `src/app/page.tsx`                      | Replace                 | Homepage: renders Hero only                                |
+| `src/components/layout/Header.tsx`      | Create                  | Sticky header with logo, company name, desktop nav         |
+| `src/components/layout/Footer.tsx`      | Create                  | Minimal footer with name, tagline, copyright year          |
+| `src/components/sections/Hero.tsx`      | Create                  | Full hero: logo mark, heading, tagline, copy, two CTAs     |
+| `src/styles/.gitkeep`                   | Create                  | Reserve the styles directory                               |
+| `.prettierrc`                           | Create                  | Prettier config (semi, singleQuote, trailingComma, etc.)   |
+| `.prettierignore`                       | Create                  | Files Prettier should skip                                 |
+| `.nvmrc`                                | Create                  | Node 22 LTS pin                                            |
+| `.env.example`                          | Create                  | Environment variable template                              |
+| `README.md`                             | Replace                 | Project docs with dev/lint/build/deploy instructions       |
+| `package.json`                          | Modify                  | Name, description, keywords, author, license, scripts      |
+| `next.config.ts`                        | Verify                  | Default generated config is sufficient                     |
 
 ---
 
 ## Task 1: Initialize Next.js project
 
 **Files:**
+
 - Creates all Next.js scaffold files in current directory
 
 - [ ] **Step 1: Run create-next-app in current directory**
@@ -78,6 +79,7 @@ git commit -m "chore: initialize Next.js 15 project scaffold"
 ## Task 2: Move logo assets
 
 **Files:**
+
 - Create: `public/assets/brand/amana-logo.png`
 - Create: `public/assets/brand/amana-logo-bg.png`
 
@@ -96,6 +98,7 @@ ls -lh public/assets/brand/
 ```
 
 Expected:
+
 ```
 amana-logo.png    ~75K
 amana-logo-bg.png ~81K
@@ -113,6 +116,7 @@ git commit -m "chore: add brand logo assets to public/assets/brand"
 ## Task 3: Install Prettier and update package.json
 
 **Files:**
+
 - Modify: `package.json`
 
 - [ ] **Step 1: Install Prettier and Tailwind plugin**
@@ -126,6 +130,7 @@ npm install -D prettier prettier-plugin-tailwindcss
 Open `package.json`. Replace the entire file content with the following (preserve the existing `dependencies` and `devDependencies` blocks — only update the top-level fields and `scripts`):
 
 The fields to set:
+
 - `"name"`: `"amana-construction"`
 - `"version"`: `"0.1.0"`
 - `"private"`: `true`
@@ -169,6 +174,7 @@ git commit -m "chore: update package.json metadata and add prettier"
 ## Task 4: Configure Prettier and update .gitignore
 
 **Files:**
+
 - Create: `.prettierrc`
 - Create: `.prettierignore`
 - Modify: `.gitignore`
@@ -232,6 +238,7 @@ git commit -m "chore: configure prettier and update gitignore"
 ## Task 5: Configure Tailwind custom colors and globals.css
 
 **Files:**
+
 - Replace: `src/app/globals.css`
 - Conditional: `tailwind.config.ts` (only if Tailwind v3)
 
@@ -240,7 +247,7 @@ git commit -m "chore: configure prettier and update gitignore"
 **For Tailwind v4** (installed by create-next-app@latest), replace `src/app/globals.css` entirely:
 
 ```css
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-charcoal: #282933;
@@ -327,6 +334,7 @@ git add src/app/globals.css tailwind.config.ts 2>/dev/null; git commit -m "feat:
 ## Task 6: Create constants file
 
 **Files:**
+
 - Create: `src/lib/constants.ts`
 
 - [ ] **Step 1: Create the lib directory and constants file**
@@ -376,6 +384,7 @@ git commit -m "feat: add brand constants and nav links"
 ## Task 7: Create Header component
 
 **Files:**
+
 - Create: `src/components/layout/Header.tsx`
 
 - [ ] **Step 1: Create directories**
@@ -395,7 +404,7 @@ import { NAV_LINKS, SITE } from '@/lib/constants';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-charcoal shadow-md">
+    <header className="bg-charcoal sticky top-0 z-50 shadow-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -415,7 +424,7 @@ export default function Header() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-white/80 transition-colors hover:text-gold"
+                className="hover:text-gold text-sm font-medium text-white/80 transition-colors"
               >
                 {link.label}
               </Link>
@@ -455,6 +464,7 @@ git commit -m "feat: add Header component with logo and desktop nav"
 ## Task 8: Create Footer component
 
 **Files:**
+
 - Create: `src/components/layout/Footer.tsx`
 
 - [ ] **Step 1: Create Footer.tsx**
@@ -469,8 +479,7 @@ export default function Footer() {
     <footer className="bg-charcoal py-8">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <p className="text-sm text-white/70">
-          {SITE.name} &middot; {SITE.tagline} &middot; &copy;{' '}
-          {new Date().getFullYear()}
+          {SITE.name} &middot; {SITE.tagline} &middot; &copy; {new Date().getFullYear()}
         </p>
       </div>
     </footer>
@@ -498,6 +507,7 @@ git commit -m "feat: add Footer component"
 ## Task 9: Create Hero section
 
 **Files:**
+
 - Create: `src/components/sections/Hero.tsx`
 
 - [ ] **Step 1: Create sections directory**
@@ -517,7 +527,7 @@ import { SITE } from '@/lib/constants';
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[85vh] flex-col items-center justify-center bg-linen px-6 py-24 text-center">
+    <section className="bg-linen flex min-h-[85vh] flex-col items-center justify-center px-6 py-24 text-center">
       <Image
         src="/assets/brand/amana-logo.png"
         alt="Amana Construction logo mark"
@@ -527,26 +537,24 @@ export default function Hero() {
         priority
       />
 
-      <h1 className="mb-3 text-5xl font-bold tracking-tight text-charcoal md:text-6xl">
+      <h1 className="text-charcoal mb-3 text-5xl font-bold tracking-tight md:text-6xl">
         {SITE.name}
       </h1>
 
-      <p className="mb-6 text-2xl font-medium text-gold md:text-3xl">{SITE.tagline}</p>
+      <p className="text-gold mb-6 text-2xl font-medium md:text-3xl">{SITE.tagline}</p>
 
-      <p className="mb-10 max-w-xl text-lg leading-relaxed text-charcoal/75">
-        {SITE.description}
-      </p>
+      <p className="text-charcoal/75 mb-10 max-w-xl text-lg leading-relaxed">{SITE.description}</p>
 
       <div className="flex flex-col gap-4 sm:flex-row">
         <Link
           href="/contact"
-          className="rounded-md bg-gold px-8 py-3 font-semibold text-charcoal transition-opacity hover:opacity-90"
+          className="bg-gold text-charcoal rounded-md px-8 py-3 font-semibold transition-opacity hover:opacity-90"
         >
           Request a Quote
         </Link>
         <Link
           href="/services"
-          className="rounded-md border-2 border-charcoal px-8 py-3 font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-white"
+          className="border-charcoal text-charcoal hover:bg-charcoal rounded-md border-2 px-8 py-3 font-semibold transition-colors hover:text-white"
         >
           View Services
         </Link>
@@ -576,6 +584,7 @@ git commit -m "feat: add Hero section with logo, tagline, and CTA buttons"
 ## Task 10: Update root layout
 
 **Files:**
+
 - Replace: `src/app/layout.tsx`
 
 - [ ] **Step 1: Replace layout.tsx**
@@ -637,6 +646,7 @@ git commit -m "feat: update root layout with metadata, font, and Header/Footer s
 ## Task 11: Update homepage
 
 **Files:**
+
 - Replace: `src/app/page.tsx`
 
 - [ ] **Step 1: Replace page.tsx**
@@ -671,6 +681,7 @@ git commit -m "feat: wire up homepage with Hero section"
 ## Task 12: Create remaining config and meta files
 
 **Files:**
+
 - Create: `src/styles/.gitkeep`
 - Create: `.env.example`
 - Create: `.nvmrc`
@@ -703,7 +714,7 @@ Create `.nvmrc`:
 
 Replace `README.md` entirely:
 
-```markdown
+````markdown
 # Amana Construction
 
 Website for Amana Construction — a trusted general contractor built on integrity, reliability, and quality craftsmanship.
@@ -730,6 +741,7 @@ npm install
 # Start dev server (localhost:3000)
 npm run dev
 ```
+````
 
 ---
 
@@ -784,14 +796,15 @@ To connect a GoDaddy domain through Vercel:
 4. **Option B:** Keep GoDaddy DNS and add the A record (`76.76.21.21`) and CNAME (`cname.vercel-dns.com`) provided by Vercel
 
 DNS propagation typically takes 5–30 minutes.
-```
+
+````
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add src/styles/.gitkeep .env.example .nvmrc README.md
 git commit -m "chore: add .nvmrc, .env.example, README, and styles directory"
-```
+````
 
 ---
 
@@ -840,6 +853,7 @@ npm run build 2>&1
 ```
 
 Expected output ends with:
+
 ```
 Route (app)                              Size     First Load JS
 ┌ ○ /                                   ...
@@ -849,17 +863,23 @@ Route (app)                              Size     First Load JS
 ```
 
 If build fails:
+
 - **Font error (`Geist` not found in `next/font/google`):** Switch to local Geist package:
+
   ```bash
   npm install geist
   ```
+
   Then update `src/app/layout.tsx` import:
+
   ```tsx
   import { GeistSans } from 'geist/font/sans';
   // Replace the Geist() call with:
   // className={GeistSans.variable}  — GeistSans is already configured, no need to call it
   ```
+
   Full replacement for the font block in layout.tsx:
+
   ```tsx
   import { GeistSans } from 'geist/font/sans';
   // Remove the geistSans const declaration entirely
