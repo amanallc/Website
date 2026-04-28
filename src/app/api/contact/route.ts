@@ -17,6 +17,7 @@ export async function POST(request: NextRequest) {
     name: formData.get('name'),
     email: formData.get('email'),
     phone: formData.get('phone') || undefined,
+    zip: formData.get('zip'),
     message: formData.get('message'),
   };
 
@@ -28,7 +29,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { name, email, phone, message } = result.data;
+  const { name, email, phone, zip, message } = result.data;
 
   // Process files
   const files = formData.getAll('files') as File[];
@@ -49,7 +50,7 @@ export async function POST(request: NextRequest) {
     to: process.env.CONTACT_EMAIL ?? 'info@amanaconstruction.com',
     replyTo: email,
     subject: `New Quote Request from ${name}`,
-    react: ContactEmail({ name, email, phone, message }),
+    react: ContactEmail({ name, email, phone, zip, message }),
     attachments: attachments.length > 0 ? attachments : undefined,
   });
 

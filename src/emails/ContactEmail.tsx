@@ -14,10 +14,11 @@ interface ContactEmailProps {
   name: string;
   email: string;
   phone?: string;
+  zip: string;
   message: string;
 }
 
-export function ContactEmail({ name, email, phone, message }: ContactEmailProps) {
+export function ContactEmail({ name, email, phone, zip, message }: ContactEmailProps) {
   return (
     <Html>
       <Head />
@@ -104,6 +105,19 @@ export function ContactEmail({ name, email, phone, message }: ContactEmailProps)
                     </td>
                   </tr>
                 )}
+                <tr>
+                  <td
+                    style={{
+                      padding: '8px 0',
+                      color: '#666',
+                      fontWeight: 'bold',
+                      fontSize: '14px',
+                    }}
+                  >
+                    Zip Code
+                  </td>
+                  <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>{zip}</td>
+                </tr>
               </tbody>
             </table>
 
