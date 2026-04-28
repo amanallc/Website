@@ -24,20 +24,21 @@ export default function AltServices() {
             />
           </div>
           <div>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+            <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
               Why Choose Us
             </p>
-            <h2 className="mb-4 text-3xl font-bold text-charcoal md:text-4xl">
+            <h2 className="text-charcoal mb-4 text-3xl font-bold md:text-4xl">
               Quality You Can Count On
             </h2>
-            <p className="mb-6 leading-relaxed text-charcoal/70">
-              At Amana Construction, we don&rsquo;t just build structures — we build trust. Every project
-              is handled with the same care and professionalism we&rsquo;d bring to our own home.
+            <p className="text-charcoal/70 mb-6 leading-relaxed">
+              At Amana Construction, we don&rsquo;t just build structures — we build trust. Every
+              project is handled with the same care and professionalism we&rsquo;d bring to our own
+              home.
             </p>
             <ul className="grid gap-3 sm:grid-cols-2">
               {FEATURES.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-sm text-charcoal/80">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-gold" />
+                <li key={f} className="text-charcoal/80 flex items-start gap-2 text-sm">
+                  <CheckCircle2 size={16} className="text-gold mt-0.5 shrink-0" />
                   {f}
                 </li>
               ))}

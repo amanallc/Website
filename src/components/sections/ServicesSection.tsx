@@ -7,12 +7,13 @@ export default function ServicesSection() {
     <section className="bg-linen py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
             What We Do
           </p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">Our Services</h2>
-          <p className="mx-auto mt-3 max-w-xl text-charcoal/70">
-            From new construction to remodeling, we deliver quality craftsmanship across every project type.
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">Our Services</h2>
+          <p className="text-charcoal/70 mx-auto mt-3 max-w-xl">
+            From new construction to remodeling, we deliver quality craftsmanship across every
+            project type.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -23,7 +24,7 @@ export default function ServicesSection() {
         <div className="mt-10 text-center">
           <Link
             href="/services"
-            className="inline-block rounded bg-gold px-8 py-3 font-semibold text-charcoal transition-opacity hover:opacity-90"
+            className="bg-gold text-charcoal inline-block rounded px-8 py-3 font-semibold transition-opacity hover:opacity-90"
           >
             View All Services
           </Link>

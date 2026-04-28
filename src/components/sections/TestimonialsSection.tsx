@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
     <section className="bg-charcoal py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
             Testimonials
           </p>
           <h2 className="text-3xl font-bold text-white md:text-4xl">What Our Clients Say</h2>
@@ -37,7 +37,9 @@ export default function TestimonialsSection() {
                     <Star key={j} size={14} className="fill-gold text-gold" />
                   ))}
                 </div>
-                <p className="mb-4 text-sm leading-relaxed italic text-white/80">&ldquo;{t.quote}&rdquo;</p>
+                <p className="mb-4 text-sm leading-relaxed text-white/80 italic">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
                 <div>
                   <p className="font-semibold text-white">{t.name}</p>
                   <p className="text-xs text-white/50">{t.role}</p>

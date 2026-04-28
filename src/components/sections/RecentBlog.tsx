@@ -6,11 +6,11 @@ export default function RecentBlog() {
     <section className="bg-linen py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
             Resources
           </p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">From Our Blog</h2>
-          <p className="mx-auto mt-3 max-w-xl text-charcoal/70">
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">From Our Blog</h2>
+          <p className="text-charcoal/70 mx-auto mt-3 max-w-xl">
             Tips, guides, and insights for homeowners and business owners in the North Atlanta area.
           </p>
         </div>

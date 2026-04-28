@@ -30,16 +30,14 @@ export default function Footer() {
           <div>
             <Link href="/" className="mb-4 flex items-center gap-3">
               <Image
-                src="/assets/brand/amana-logo.png"
+                src="/assets/img/logos/logo-w-bg-horizontal.png"
                 alt="Amana Construction"
                 width={2000}
                 height={2000}
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="mb-4 text-sm leading-relaxed text-white/70">
-              {SITE.description}
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-white/70">{SITE.description}</p>
             <div className="space-y-2 text-sm text-white/70">
               <p className="flex items-center gap-2">
                 <MapPin size={14} className="text-gold shrink-0" />
@@ -59,13 +57,25 @@ export default function Footer() {
               </p>
             </div>
             <div className="mt-4 flex gap-3">
-              <a href="#" aria-label="Facebook" className="text-white/60 hover:text-gold transition-colors">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="hover:text-gold text-white/60 transition-colors"
+              >
                 <Globe size={18} />
               </a>
-              <a href="#" aria-label="Instagram" className="text-white/60 hover:text-gold transition-colors">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="hover:text-gold text-white/60 transition-colors"
+              >
                 <Share2 size={18} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-white/60 hover:text-gold transition-colors">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="hover:text-gold text-white/60 transition-colors"
+              >
                 <Rss size={18} />
               </a>
             </div>
@@ -114,7 +124,9 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-4 text-center text-xs text-white/50 md:flex-row">
-          <p>&copy; {new Date().getFullYear()} {SITE.name}. All Rights Reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {SITE.name}. All Rights Reserved.
+          </p>
           <p>{SITE.tagline} &middot; Roswell, GA</p>
         </div>
       </div>

@@ -42,9 +42,7 @@ export default function HeroCarousel() {
                 <h1 className="mb-3 text-4xl font-bold text-white drop-shadow md:text-6xl">
                   Amana Construction
                 </h1>
-                <p className="mb-8 text-xl font-medium text-gold md:text-2xl">
-                  Built on Trust
-                </p>
+                <p className="text-gold mb-8 text-xl font-medium md:text-2xl">Built on Trust</p>
                 <p className="mb-8 max-w-xl text-base text-white/80 md:text-lg">
                   Serving Roswell, Alpharetta, and the greater North Atlanta area with quality
                   craftsmanship and honest communication.
@@ -52,13 +50,13 @@ export default function HeroCarousel() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="rounded bg-gold px-8 py-3 font-semibold text-charcoal transition-opacity hover:opacity-90"
+                    className="bg-gold text-charcoal rounded px-8 py-3 font-semibold transition-opacity hover:opacity-90"
                   >
                     Get a Free Estimate
                   </Link>
                   <Link
                     href="/projects"
-                    className="rounded border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-charcoal"
+                    className="hover:text-charcoal rounded border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white"
                   >
                     View Our Work
                   </Link>

@@ -49,7 +49,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [value]);
 
   return (
-    <div ref={ref} className="text-4xl font-bold text-gold md:text-5xl">
+    <div ref={ref} className="text-gold text-4xl font-bold md:text-5xl">
       {count}
       {suffix}
     </div>

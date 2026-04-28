@@ -19,8 +19,10 @@ export default function Portfolio() {
     <section className="py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-10 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">Portfolio</p>
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl">Our Projects</h2>
+          <p className="text-gold mb-2 text-sm font-semibold tracking-widest uppercase">
+            Portfolio
+          </p>
+          <h2 className="text-charcoal text-3xl font-bold md:text-4xl">Our Projects</h2>
         </div>
 
         {/* Filter buttons */}
@@ -32,7 +34,7 @@ export default function Portfolio() {
               className={`rounded px-5 py-2 text-sm font-semibold transition-colors ${
                 active === f.value
                   ? 'bg-gold text-charcoal'
-                  : 'border border-charcoal/10 bg-white text-charcoal/60 hover:text-charcoal'
+                  : 'border-charcoal/10 text-charcoal/60 hover:text-charcoal border bg-white'
               }`}
             >
               {f.label}

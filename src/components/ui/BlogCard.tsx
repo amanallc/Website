@@ -10,7 +10,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
         <Image src={post.image} alt={post.title} fill className="object-cover" />
       </div>
       <div className="p-5">
-        <div className="mb-3 flex gap-4 text-xs text-charcoal/50">
+        <div className="text-charcoal/50 mb-3 flex gap-4 text-xs">
           <span className="flex items-center gap-1">
             <Calendar size={12} /> {post.date}
           </span>
@@ -18,9 +18,12 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             <User size={12} /> {post.author}
           </span>
         </div>
-        <h3 className="mb-2 font-semibold leading-snug text-charcoal">{post.title}</h3>
-        <p className="mb-4 text-sm leading-relaxed text-charcoal/70">{post.excerpt}</p>
-        <Link href={post.href} className="text-sm font-medium text-gold hover:text-charcoal transition-colors">
+        <h3 className="text-charcoal mb-2 leading-snug font-semibold">{post.title}</h3>
+        <p className="text-charcoal/70 mb-4 text-sm leading-relaxed">{post.excerpt}</p>
+        <Link
+          href={post.href}
+          className="text-gold hover:text-charcoal text-sm font-medium transition-colors"
+        >
           Read more →
         </Link>
       </div>

@@ -61,19 +61,47 @@ export function ContactEmail({ name, email, phone, message }: ContactEmailProps)
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <tbody>
                 <tr>
-                  <td style={{ padding: '8px 0', color: '#666', width: '100px', fontWeight: 'bold', fontSize: '14px' }}>
+                  <td
+                    style={{
+                      padding: '8px 0',
+                      color: '#666',
+                      width: '100px',
+                      fontWeight: 'bold',
+                      fontSize: '14px',
+                    }}
+                  >
                     Name
                   </td>
                   <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>{name}</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '8px 0', color: '#666', fontWeight: 'bold', fontSize: '14px' }}>Email</td>
+                  <td
+                    style={{
+                      padding: '8px 0',
+                      color: '#666',
+                      fontWeight: 'bold',
+                      fontSize: '14px',
+                    }}
+                  >
+                    Email
+                  </td>
                   <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>{email}</td>
                 </tr>
                 {phone && (
                   <tr>
-                    <td style={{ padding: '8px 0', color: '#666', fontWeight: 'bold', fontSize: '14px' }}>Phone</td>
-                    <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>{phone}</td>
+                    <td
+                      style={{
+                        padding: '8px 0',
+                        color: '#666',
+                        fontWeight: 'bold',
+                        fontSize: '14px',
+                      }}
+                    >
+                      Phone
+                    </td>
+                    <td style={{ padding: '8px 0', color: '#282933', fontSize: '14px' }}>
+                      {phone}
+                    </td>
                   </tr>
                 )}
               </tbody>
@@ -81,7 +109,9 @@ export function ContactEmail({ name, email, phone, message }: ContactEmailProps)
 
             <Hr style={{ borderColor: '#e5e5e5', margin: '24px 0' }} />
 
-            <Text style={{ color: '#666', fontWeight: 'bold', fontSize: '14px', marginBottom: '8px' }}>
+            <Text
+              style={{ color: '#666', fontWeight: 'bold', fontSize: '14px', marginBottom: '8px' }}
+            >
               Message
             </Text>
             <Text
@@ -108,7 +138,8 @@ export function ContactEmail({ name, email, phone, message }: ContactEmailProps)
             }}
           >
             <Text style={{ color: '#ffffff', fontSize: '12px', margin: 0, opacity: 0.6 }}>
-              Amana Construction &middot; Built on Trust &middot; Roswell, GA &middot; (678) 468-8022
+              Amana Construction &middot; Built on Trust &middot; Roswell, GA &middot; (678)
+              468-8022
             </Text>
           </Section>
         </Container>

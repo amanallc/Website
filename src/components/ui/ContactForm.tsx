@@ -9,7 +9,12 @@ interface FormState {
 }
 
 export default function ContactForm() {
-  const [form, setForm] = useState<ContactFormData>({ name: '', email: '', phone: '', message: '' });
+  const [form, setForm] = useState<ContactFormData>({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
   const [state, setState] = useState<FormState>({ status: 'idle', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,7 +38,10 @@ export default function ContactForm() {
         throw new Error(data.error ?? 'Something went wrong');
       }
 
-      setState({ status: 'success', message: "Thank you! We'll be in touch within 1 business day." });
+      setState({
+        status: 'success',
+        message: "Thank you! We'll be in touch within 1 business day.",
+      });
       setForm({ name: '', email: '', phone: '', message: '' });
     } catch (err) {
       setState({
@@ -98,7 +106,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.status === 'loading'}
-        className="w-full rounded bg-gold py-3 font-semibold text-charcoal transition-opacity hover:opacity-90 disabled:opacity-50"
+        className="bg-gold text-charcoal w-full rounded py-3 font-semibold transition-opacity hover:opacity-90 disabled:opacity-50"
       >
         {state.status === 'loading' ? 'Sending…' : 'Send Message'}
       </button>
