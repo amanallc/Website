@@ -1,0 +1,151 @@
+- generic [ref=e4]:
+  - main [ref=e6]:
+    - generic [ref=e8]:
+      - navigation [ref=e11]:
+        - generic [ref=e12]:
+          - link "Amana Construction" [ref=e15] [cursor=pointer]:
+            - /url: /
+            - img "Amana Construction" [ref=e17]
+          - generic [ref=e18]:
+            - paragraph [ref=e20]:
+              - link "(678) 468-8022" [ref=e21] [cursor=pointer]:
+                - /url: tel:6784688022
+            - generic [ref=e23]:
+              - button "Shopping Cart Icon" [ref=e29] [cursor=pointer]:
+                - img [ref=e30]
+              - button [ref=e37] [cursor=pointer]:
+                - img [ref=e39]
+      - img [ref=e43]:
+        - generic [ref=e45]:
+          - 'heading "Amana Construction: Crafting Your Vision" [level=1] [ref=e48]'
+          - paragraph [ref=e50]: At Amana Construction, we believe in building your future, one brick at a time, through our expert contractor Tee.
+          - link "Get A Free Estimate" [ref=e54] [cursor=pointer]:
+            - /url: /#88c11ccb-8fc5-4469-b152-1546c6abe087
+  - region [ref=e56]:
+    - generic [ref=e62]:
+      - img "Large brick and stone house with manicured shrubs and multiple garage doors." [ref=e67]
+      - generic [ref=e69]:
+        - heading "About Us" [level=4] [ref=e70]
+        - paragraph [ref=e72]:
+          - strong [ref=e74]: With over 25 years of experience in the construction industry, Amana Construction has become a trusted name in the field of construction. Our team of experts has the knowledge, skills, and expertise to handle any project, big or small. We have completed numerous projects ranging from residential homes to commercial buildings, and our clients can attest to our commitment to quality and excellence.
+  - region [ref=e76]:
+    - img [ref=e78]:
+      - 'heading "Customer Testimonials: Our Work Speaks for Itself" [level=2] [ref=e82]'
+  - region [ref=e86]
+  - region [ref=e91]:
+    - generic [ref=e93]:
+      - 'heading "Transforming Spaces: A Showcase of Amana Construction''s Innovative Construction Solutions" [level=2] [ref=e95]'
+      - generic [ref=e103]:
+        - list [ref=e105]:
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+        - generic:
+          - generic:
+            - generic:
+              - list
+              - button [ref=e106] [cursor=pointer]:
+                - img [ref=e107]
+        - generic:
+          - button [ref=e109] [cursor=pointer]:
+            - img [ref=e110]
+          - button [ref=e112] [cursor=pointer]:
+            - img [ref=e113]
+  - region [ref=e116]:
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - img "A large house under construction lit at night with a crescent moon in the sky." [ref=e125] [cursor=pointer]
+        - img "Modern fast-food restaurant interior with stone walls and beverage station." [ref=e129] [cursor=pointer]
+        - img "Long wire mesh gabion wall filled with stones and a drainage pipe on a construction site." [ref=e133] [cursor=pointer]
+      - generic [ref=e134]:
+        - img "Close-up of a shingled roof with trees in the background on a clear day." [ref=e138] [cursor=pointer]
+        - img "Spacious two-story brick house with a large driveway and parked gray SUV." [ref=e142] [cursor=pointer]
+        - img "Modern white two-story house with black accents and a gray vehicle parked outside." [ref=e146] [cursor=pointer]
+  - contentinfo [ref=e148]:
+    - generic [ref=e152]:
+      - paragraph [ref=e154]: Copyright © 2026 Amana Construction - All Rights Reserved.
+      - separator [ref=e155]
+      - generic [ref=e156]:
+        - paragraph [ref=e157]: Powered by
+        - link [ref=e158] [cursor=pointer]:
+          - /url: https://www.godaddy.com/websites/website-builder?isc=pwugc&utm_source=wsb&utm_medium=applications&utm_campaign=en-us_corp_applications_base
+          - img [ref=e159]
+  - generic [ref=e164]:
+    - heading "This website uses cookies." [level=4] [ref=e165]
+    - paragraph [ref=e167]: We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.
+    - link "Accept" [ref=e169] [cursor=pointer]:
+      - /url: ""
