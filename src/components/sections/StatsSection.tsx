@@ -20,6 +20,8 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let timer: ReturnType<typeof setInterval> | null = null;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return;
@@ -27,11 +29,11 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
         let start = 0;
         const duration = 1800;
         const step = value / (duration / 16);
-        const timer = setInterval(() => {
+        timer = setInterval(() => {
           start += step;
           if (start >= value) {
             setCount(value);
-            clearInterval(timer);
+            if (timer !== null) clearInterval(timer);
           } else {
             setCount(Math.floor(start));
           }
@@ -40,7 +42,10 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
       { threshold: 0.4 },
     );
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (timer !== null) clearInterval(timer);
+    };
   }, [value]);
 
   return (

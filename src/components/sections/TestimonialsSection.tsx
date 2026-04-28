@@ -29,8 +29,8 @@ export default function TestimonialsSection() {
           }}
           className="pb-10"
         >
-          {TESTIMONIALS.map((t, i) => (
-            <SwiperSlide key={i}>
+          {TESTIMONIALS.map((t) => (
+            <SwiperSlide key={t.name}>
               <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
                 <div className="mb-3 flex gap-1">
                   {[...Array(5)].map((_, j) => (
