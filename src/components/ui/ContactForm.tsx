@@ -49,7 +49,7 @@ export default function ContactForm() {
 
   const validateField = (name: string, value: string) => {
     try {
-      const fieldSchema = (contactSchema.shape as any)[name];
+      const fieldSchema = (contactSchema.shape as Record<string, z.ZodTypeAny>)[name];
       if (fieldSchema) {
         fieldSchema.parse(value);
       }
