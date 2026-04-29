@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
   }
 
   const { error } = await resend.emails.send({
-    from: 'Amana Construction <onboarding@resend.dev>',
+    from: 'Amana Construction <noreply@amanaconstruction.us>',
     to: process.env.CONTACT_EMAIL ?? 'support@amanaconstruction.us',
     replyTo: email,
     subject: `New Quote Request from ${name}`,
